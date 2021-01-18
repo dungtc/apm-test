@@ -15,14 +15,14 @@ Run docker-compose up. Compose will download the official docker containers and 
 #### SERVER
 
 Add apmhttp wrapper for middleware handler
-```
+```golang
 http.ListenAndServe(":8080", apmhttp.Wrap(mux))
 ```
 
 #### CLIENT
 
 Add apmhttp client wrapper for http request
-```
+```golang
 client := apmhttp.WrapClient(http.DefaultClient)
 ```
 
